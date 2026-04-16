@@ -5,6 +5,7 @@ import { AppContext, AppProvider } from '@edx/frontend-platform/react';
 import Header from '@edx/frontend-component-header';
 
 import './index.scss';
+import LearningHeader from '../src/learning-header/LearningHeader';
 import StudioHeader from '../src/studio-header/StudioHeader';
 
 subscribe(APP_READY, () => {
@@ -31,7 +32,7 @@ subscribe(APP_READY, () => {
       }}>
         <Header />
       </AppContext.Provider>
-      <h5 className="mt-2  mb-5">Logged in state</h5>
+      <h5 className="mt-2  mb-5">Logged in state for header</h5>
       <AppContext.Provider value={{
         authenticatedUser: {
           userId: '123abc',
@@ -60,6 +61,23 @@ subscribe(APP_READY, () => {
         />
       </AppContext.Provider>
       <h5 className="mt-2">Logged in state for Studio header</h5>
+      <AppContext.Provider value={{
+        authenticatedUser: {
+          userId: '123abc',
+          username: 'testuser',
+          roles: [],
+          administrator: false,
+        },
+        config: getConfig(),
+      }}>
+        <LearningHeader
+          courseOrg="testX"
+          courseNumber="run123"
+          courseTitle="Course Name"
+          showUserDropdown
+        />
+      </AppContext.Provider>
+      <h5 className="mt-2">Logged in state for Learning header</h5>
     </AppProvider>,
     document.getElementById('root'),
   );
