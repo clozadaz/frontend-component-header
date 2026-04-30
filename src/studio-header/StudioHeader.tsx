@@ -40,6 +40,9 @@ const StudioHeader: FunctionComponent<Props> = ({
 }) => {
   // @ts-expect-error - frontend-platform doesn't yet have type information :/
   const { authenticatedUser, config } = useContext(AppContext);
+  const profileImage = authenticatedUser?.profileImage;
+  const authenticatedUserAvatar = authenticatedUser?.avatar
+    || (profileImage?.hasImage ? profileImage.imageUrlMedium : null);
   const props = {
     logo: config.LOGO_URL,
     logoAltText: `Studio ${config.SITE_NAME}`,
@@ -49,7 +52,7 @@ const StudioHeader: FunctionComponent<Props> = ({
     containerProps,
     username: authenticatedUser?.username,
     isAdmin: authenticatedUser?.administrator,
-    authenticatedUserAvatar: authenticatedUser?.avatar,
+    authenticatedUserAvatar,
     studioBaseUrl: isNewHomePage ? '/home' : config.STUDIO_BASE_URL,
     logoutUrl: config.LOGOUT_URL,
     isHiddenMainMenu,
