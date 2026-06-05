@@ -1,0 +1,8 @@
+allowBuilds:
+  '@bundled-es-modules/glob': true
+  '@parcel/watcher': true
+  core-js: true
+  core-js-pure: true
+  sharp: true
+  style-dictionary: true
+  unrs-resolver: true

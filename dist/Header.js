@@ -45,14 +45,14 @@ var Header = function Header(_ref) {
   var intl = useIntl();
   var defaultMainMenu = [{
     type: 'item',
-    href: "".concat(config.LMS_BASE_URL, "/dashboard"),
+    href: "".concat(config.LMS_BASE_URL, "/courses"),
     content: intl.formatMessage(messages['header.links.courses'])
   }];
   var defaultUserMenu = authenticatedUser === null ? [] : [{
     heading: '',
     items: [{
       type: 'item',
-      href: "".concat(config.LMS_BASE_URL, "/dashboard"),
+      href: "".concat(config.LMS_BASE_URL, "/courses"),
       content: intl.formatMessage(messages['header.user.menu.dashboard'])
     }, {
       type: 'item',
@@ -87,7 +87,7 @@ var Header = function Header(_ref) {
   var props = {
     logo: config.LOGO_URL,
     logoAltText: config.SITE_NAME,
-    logoDestination: "".concat(config.LMS_BASE_URL, "/dashboard"),
+    logoDestination: "".concat(config.LMS_BASE_URL, "/courses"),
     loggedIn: authenticatedUser !== null,
     username: authenticatedUser !== null ? authenticatedUser.username : null,
     avatar: authenticatedUser !== null ? authenticatedUser.avatar : null,
