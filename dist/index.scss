@@ -3,7 +3,7 @@ $blue: #007db8;
 $white: #fff;
 $component-active-bg: #0A3055FF !default;
 $component-active-color: $white !default;
-$rounded-pill: 50rem  !default;
+$rounded-pill: 50rem !default;
 
 @import './Menu/menu.scss';
 @import './studio-header/StudioHeader.scss';
@@ -23,9 +23,10 @@ $rounded-pill: 50rem  !default;
   width: 3rem;
   padding: .75rem;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: rgba(0, 0, 0, .1);
   }
 }
@@ -53,25 +54,34 @@ $rounded-pill: 50rem  !default;
 .site-header-desktop {
   position: relative;
   z-index: 1000;
+  background-color: #042354
 }
 
 .site-header-mobile {
-  height: 3rem;
+  height: 88px;
 
   .nav-link {
     text-decoration: none;
     cursor: pointer;
   }
 
+  div a.logo {
+    height: 48px;
+    padding: 20px;
+    top: 0;
+    box-sizing: unset;
+    margin-right: 0;
+  }
+
   img {
-    height: 1.5rem;
+    height: 100%;
   }
 }
 
 
 .site-header-desktop {
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, .1);
-  background: var(--pgn-color-white, $white);
+  height: 110px;
 
   .nav-link {
     text-decoration: none;
@@ -79,19 +89,21 @@ $rounded-pill: 50rem  !default;
 
   .logo {
     display: block;
-    box-sizing: content-box;
+    box-sizing: border-box;
     position: relative;
-    top: -.05em;
-    height: 1.75rem;
-    padding: var(--pgn-spacing-spacer-base, $spacer) 0;
+    top: 0;
+    height: 100%;
+    padding: 25px;
     margin-right: var(--pgn-spacing-spacer-base, $spacer);
 
     img {
       display: block;
-      height: 100%;
+      height: 60px;
     }
   }
+
   .secondary-menu-container {
+
     .nav-link:hover,
     .nav-link:focus,
     .nav-link.active,
@@ -100,6 +112,7 @@ $rounded-pill: 50rem  !default;
       color: var(--pgn-color-active, $component-active-color);
     }
   }
+
   .main-nav {
     .nav-link {
       padding: 1.125rem var(--pgn-spacing-spacer-base, $spacer);
@@ -123,7 +136,7 @@ $rounded-pill: 50rem  !default;
         border-top: solid 2px var(--pgn-color-bg-active);
         left: 0;
         right: 0;
-        box-shadow: var(--pgn-elevation-box-shadow-down-1, 0 1px 2px rgba(0,0,0,.25));
+        box-shadow: var(--pgn-elevation-box-shadow-down-1, 0 1px 2px rgba(0, 0, 0, .25));
         border-bottom-left-radius: 2px;
         border-bottom-right-radius: 2px;
         padding: var(--pgn-spacing-spacer-base, $spacer);
