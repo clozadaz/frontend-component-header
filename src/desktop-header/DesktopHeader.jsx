@@ -68,7 +68,7 @@ const DesktopHeader = ({
           <div className="d-flex flex-grow-1">
             <nav
               aria-label={intl.formatMessage(messages['header.label.main.nav'])}
-              className="nav main-nav"
+              className="nav main-nav nav-fill"
             >
               {renderMainMenu()}
             </nav>
