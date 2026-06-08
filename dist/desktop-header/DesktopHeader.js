@@ -81,13 +81,15 @@ var DesktopHeader = function DesktopHeader(_ref) {
     className: "container-fluid ".concat(logoClasses)
   }, /*#__PURE__*/React.createElement("div", {
     className: "nav-container position-relative d-flex align-items-center"
-  }, /*#__PURE__*/React.createElement(LogoSlot, logoProps), /*#__PURE__*/React.createElement("nav", {
+  }, /*#__PURE__*/React.createElement(LogoSlot, logoProps), /*#__PURE__*/React.createElement("div", {
+    className: "d-flex flex-grow-1"
+  }, /*#__PURE__*/React.createElement("nav", {
     "aria-label": intl.formatMessage(messages['header.label.main.nav']),
     className: "nav main-nav"
   }, renderMainMenu()), /*#__PURE__*/React.createElement("nav", {
     "aria-label": intl.formatMessage(messages['header.label.secondary.nav']),
     className: "nav secondary-menu-container align-items-center ml-auto"
-  }, loggedIn ? /*#__PURE__*/React.createElement(React.Fragment, null, renderSecondaryMenu(), renderUserMenu()) : renderLoggedOutItems()))));
+  }, loggedIn ? /*#__PURE__*/React.createElement(React.Fragment, null, renderSecondaryMenu(), renderUserMenu()) : renderLoggedOutItems())))));
 };
 export var desktopHeaderDataShape = {
   mainMenu: desktopHeaderMainOrSecondaryMenuDataShape,

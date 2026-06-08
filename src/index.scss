@@ -3,7 +3,7 @@ $blue: #007db8;
 $white: #fff;
 $component-active-bg: #0A3055FF !default;
 $component-active-color: $white !default;
-$rounded-pill: 50rem  !default;
+$rounded-pill: 50rem !default;
 
 @import './Menu/menu.scss';
 @import './studio-header/StudioHeader.scss';
@@ -23,9 +23,10 @@ $rounded-pill: 50rem  !default;
   width: 3rem;
   padding: .75rem;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: rgba(0, 0, 0, .1);
   }
 }
@@ -53,25 +54,54 @@ $rounded-pill: 50rem  !default;
 .site-header-desktop {
   position: relative;
   z-index: 1000;
+  background-color: #042354
 }
 
 .site-header-mobile {
-  height: 3rem;
+  height: 88px;
 
   .nav-link {
     text-decoration: none;
     cursor: pointer;
+    justify-content: center;
+    padding: .5rem .75rem;
+    font-size: .75rem;
+    line-height: 130%;
+    transition: all .3s;
+
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: pre-line;
+    border: 2px solid #1f33af;
+    border-right: 0 #1f33af;
+    flex: 1;
+    align-items: center;
+    height: 60px;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: 400;
+    display: flex;
+  }
+
+  div a.logo {
+    height: 48px;
+    padding: 20px;
+    top: 0;
+    box-sizing: unset;
+    margin-right: 0;
   }
 
   img {
-    height: 1.5rem;
+    height: 100%;
   }
 }
 
 
 .site-header-desktop {
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, .1);
-  background: var(--pgn-color-white, $white);
+  height: 110px;
 
   .nav-link {
     text-decoration: none;
@@ -79,19 +109,20 @@ $rounded-pill: 50rem  !default;
 
   .logo {
     display: block;
-    box-sizing: content-box;
+    box-sizing: border-box;
     position: relative;
-    top: -.05em;
-    height: 1.75rem;
-    padding: var(--pgn-spacing-spacer-base, $spacer) 0;
-    margin-right: var(--pgn-spacing-spacer-base, $spacer);
+    top: 0;
+    height: 100%;
+    padding: 25px;
 
     img {
       display: block;
-      height: 100%;
+      height: 60px;
     }
   }
+
   .secondary-menu-container {
+
     .nav-link:hover,
     .nav-link:focus,
     .nav-link.active,
@@ -100,6 +131,7 @@ $rounded-pill: 50rem  !default;
       color: var(--pgn-color-active, $component-active-color);
     }
   }
+
   .main-nav {
     .nav-link {
       padding: 1.125rem var(--pgn-spacing-spacer-base, $spacer);
@@ -123,7 +155,7 @@ $rounded-pill: 50rem  !default;
         border-top: solid 2px var(--pgn-color-bg-active);
         left: 0;
         right: 0;
-        box-shadow: var(--pgn-elevation-box-shadow-down-1, 0 1px 2px rgba(0,0,0,.25));
+        box-shadow: var(--pgn-elevation-box-shadow-down-1, 0 1px 2px rgba(0, 0, 0, .25));
         border-bottom-left-radius: 2px;
         border-bottom-right-radius: 2px;
         padding: var(--pgn-spacing-spacer-base, $spacer);
@@ -134,4 +166,119 @@ $rounded-pill: 50rem  !default;
   .search-input {
     border-radius: var(--pgn-size-rounded-pill, $rounded-pill);
   }
+}
+
+/* =========================================================
+   REPLICA DE DISEÑO: Header PUCP
+   ========================================================= */
+
+/* 1. Contenedor principal y fondo */
+.site-header-desktop {
+  background-color: #002257 !important;
+  height: 110px !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.site-header-desktop .container-fluid,
+.site-header-desktop .nav-container {
+  height: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* 2. Logo */
+.site-header-desktop .logo {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 40px !important;
+  margin-right: 0 !important;
+  top: 0 !important;
+}
+
+.site-header-desktop .logo img {
+  height: 60px !important;
+  width: auto !important;
+}
+
+/* 3. Navegación Principal (Transformación a bloques con bordes) */
+.site-header-desktop .main-nav {
+  height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.site-header-desktop .main-nav .nav-link {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 30px !important;
+  color: #FFFFFF !important;
+  text-transform: uppercase !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  background-color: transparent !important;
+  border: 2px solid #1f33af !important;
+  border-radius: 0 !important;
+  transition: background-color 0.3s ease !important;
+}
+
+/* Borde derecho para el último elemento del menú */
+.site-header-desktop .main-nav .nav-link:last-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Estado Hover y Activo (Iluminación sutil como en el diseño original) */
+.site-header-desktop .main-nav .nav-link:hover,
+.site-header-desktop .main-nav .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 4. Menú Secundario (Transformación del botón usuario a bloque naranja) */
+.site-header-desktop .secondary-menu-container {
+  height: 100% !important;
+  margin-left: auto !important;
+  /* Lo empuja estrictamente a la derecha */
+}
+
+.site-header-desktop .secondary-menu-container .menu {
+  height: 100% !important;
+}
+
+.site-header-desktop .menu-trigger {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  background-color: #FF9100 !important;
+  /* Color Naranja PUCP */
+  color: #002257 !important;
+  /* Texto Azul Oscuro */
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 40px !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: none !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.site-header-desktop .menu-trigger:hover {
+  background-color: #FFA733 !important;
+  /* Naranja ligeramente más claro en hover */
+  color: #002257 !important;
+}
+
+/* Ajustes gráficos para el avatar y los íconos (SVG) dentro del botón naranja */
+.site-header-desktop .menu-trigger .avatar {
+  border: none;
+}
+
+.site-header-desktop .menu-trigger svg {
+  fill: #002257 !important;
+  color: #002257 !important;
 }

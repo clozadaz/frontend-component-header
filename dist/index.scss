@@ -63,6 +63,26 @@ $rounded-pill: 50rem !default;
   .nav-link {
     text-decoration: none;
     cursor: pointer;
+    justify-content: center;
+    padding: .5rem .75rem;
+    font-size: .75rem;
+    line-height: 130%;
+    transition: all .3s;
+
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: pre-line;
+    border: 2px solid #1f33af;
+    border-right: 0 #1f33af;
+    flex: 1;
+    align-items: center;
+    height: 60px;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: 400;
+    display: flex;
   }
 
   div a.logo {
@@ -184,10 +204,9 @@ $rounded-pill: 50rem !default;
 
 /* 3. Navegación Principal (Transformación a bloques con bordes) */
 .site-header-desktop .main-nav {
-  height: 100% !important;
+  height: 60px !important;
   display: flex !important;
   align-items: center !important;
-  margin-left: 20px !important;
 }
 
 .site-header-desktop .main-nav .nav-link {
@@ -202,7 +221,7 @@ $rounded-pill: 50rem !default;
   font-weight: 600 !important;
   letter-spacing: 0.5px !important;
   background-color: transparent !important;
-  border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border: 2px solid #1f33af !important;
   border-radius: 0 !important;
   transition: background-color 0.3s ease !important;
 }
