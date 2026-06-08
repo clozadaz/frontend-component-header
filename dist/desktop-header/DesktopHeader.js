@@ -85,7 +85,7 @@ var DesktopHeader = function DesktopHeader(_ref) {
     className: "d-flex flex-grow-1"
   }, /*#__PURE__*/React.createElement("nav", {
     "aria-label": intl.formatMessage(messages['header.label.main.nav']),
-    className: "nav main-nav"
+    className: "nav main-nav nav-fill"
   }, renderMainMenu()), /*#__PURE__*/React.createElement("nav", {
     "aria-label": intl.formatMessage(messages['header.label.secondary.nav']),
     className: "nav secondary-menu-container align-items-center"

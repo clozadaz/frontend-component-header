@@ -133,6 +133,8 @@ $rounded-pill: 50rem !default;
   }
 
   .main-nav {
+    width: 75%;
+
     .nav-link {
       padding: 1.125rem var(--pgn-spacing-spacer-base, $spacer);
       text-decoration: none;
@@ -195,6 +197,7 @@ $rounded-pill: 50rem !default;
   padding: 0 40px !important;
   margin-right: 0 !important;
   top: 0 !important;
+  width: 25%;
 }
 
 .site-header-desktop .logo img {
