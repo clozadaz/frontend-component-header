@@ -94,7 +94,6 @@ $rounded-pill: 50rem !default;
     top: 0;
     height: 100%;
     padding: 25px;
-    margin-right: var(--pgn-spacing-spacer-base, $spacer);
 
     img {
       display: block;
@@ -174,6 +173,8 @@ $rounded-pill: 50rem !default;
   display: flex !important;
   align-items: center !important;
   padding: 0 40px !important;
+  margin-right: 0 !important;
+  top: 0 !important;
 }
 
 .site-header-desktop .logo img {
@@ -255,7 +256,7 @@ $rounded-pill: 50rem !default;
 
 /* Ajustes gráficos para el avatar y los íconos (SVG) dentro del botón naranja */
 .site-header-desktop .menu-trigger .avatar {
-  border: 2px solid #002257 !important;
+  border: none;
 }
 
 .site-header-desktop .menu-trigger svg {
