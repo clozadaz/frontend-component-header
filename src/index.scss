@@ -244,7 +244,7 @@ $rounded-pill: 50rem !default;
 /* 4. Menú Secundario (Transformación del botón usuario a bloque naranja) */
 .site-header-desktop .secondary-menu-container {
   height: 60px !important;
-  width: 75%;
+  width: 25%;
 }
 
 .site-header-desktop .secondary-menu-container .menu {
@@ -269,6 +269,7 @@ $rounded-pill: 50rem !default;
   letter-spacing: 0.5px !important;
   box-shadow: none !important;
   transition: background-color 0.3s ease !important;
+  width: 100% !important;
 }
 
 .site-header-desktop .menu-trigger:hover {
